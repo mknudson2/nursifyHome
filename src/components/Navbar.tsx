@@ -1,14 +1,18 @@
+import { IconContext } from "react-icons";
 import { BsList } from "react-icons/bs";
 
 function Navbar() {
-    return (
+    return (    
     <nav className="navbar">
         <div className="container">
             <a className="navbar-brand" href="#">
                 <img src="public/NursifyLogo.webp" alt="Nursify Education" width="300" height="150"/>
             </a>
             <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
-                <BsList/>
+            <IconContext.Provider value={{size: "25px"}}>
+
+            <BsList/>
+            </IconContext.Provider>
             </button>
 
             <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
