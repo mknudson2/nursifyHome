@@ -18,8 +18,84 @@ body {
   padding: 0;
   margin: 0;
   display: block;
+  width: 100%;
+  /* height: 100vh; */
 }
 
-.react-icons {
-  vertical-align: middle;
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.hero-container {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  /* border: 2px solid var(--accent-color); */
+  background-color: #fff;
+  width: 72.5%;
+  height: 65vh;
+  border-radius: 8px;
+}
+
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--body-bkg));
+  pointer-events: none;
+  z-index: 1;
+  }
+
+.hero-container h1 {
+  position: absolute;
+  bottom: 6rem;
+  right: 0;
+  font-size: 75px;
+  z-index: 2;
+}
+
+.hero-container h2 {
+  position: absolute;
+  bottom: 3.5rem;
+  right: 0;
+  font-size: 35px;
+  color: var(--accent-color);
+  font-style: italic;
+  font-weight: 400;
+  z-index: 2;
+}
+
+/* === Experience Buttons === */
+.experience-button-container {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 20px; /* Added margin for spacing */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  column-gap: 25%;
+}
+
+.exp-btn {
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
+  width: 15.625rem;
+  padding: 10px 20px; /* Adjusted padding for better visibility */
+  font-size: 1.25rem;
+  background-color: var(--body-bkg); /* Ensure background contrasts with text */
+  color: var(--main-text); /* Ensure text color is readable */
+  cursor: pointer; /* Added cursor pointer for better UX */
+}
+
+.exp-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--main-text);
+  cursor: pointer;
+  transition: .25s ease-in-out;
 }

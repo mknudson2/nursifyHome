@@ -1,14 +1,18 @@
+import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import ExperienceButtons from './components/ExperienceButtons'
+
 import './styles/App.css'
 
 
 function App() {
-const name = "Michael"
+
 
   return (
     <>
       <Navbar/>
-      <h1>Hello {name}</h1>
+      <Hero />
+      <ExperienceButtons/>
     </>
   )
 }

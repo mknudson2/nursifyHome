@@ -6,10 +6,10 @@ function Navbar() {
     <nav className="navbar">
         <div className="container">
             <a className="navbar-brand" href="#">
-                <img src="public/NursifyLogo.webp" alt="Nursify Education" width="300" height="150"/>
+                <img src="public/NursifyLogo.webp" alt="Nursify Education" width="150" height="75"/>
             </a>
             <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
-            <IconContext.Provider value={{size: "25px"}}>
+            <IconContext.Provider value={{size: "20px"}}>
 
             <BsList/>
             </IconContext.Provider>
