@@ -62,7 +62,10 @@ body {
   display: block;
   position: relative;
   margin: 0 auto;
-  background-color: #fff;
+  background-image: url('/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 72.5%;
   height: 65vh;
   border-radius: 8px;
@@ -374,4 +377,125 @@ font-weight: 600;
 .gameParagraph a {
   text-decoration: none;
   color: var(--cl-mixed)
+}
+
+/* === Testimonials === */
+.testimonials-carousel {
+  text-align: center;
+  padding: 20px;
+  width: 72.5%;
+  margin: 0 auto;
+}
+
+.testimonials-carousel h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimonials-carousel .highlight {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.testimonial-divider {
+  border: none;
+  border-top: 2px solid var(--body-bkg);
+  margin: 0 auto;
+  width: 72.5%;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.testimonial-card {
+  flex: 0 0 300px; /* Adjust width to fit multiple cards */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  margin: 0 50px;
+}
+
+.testimonial-card.active {
+  border-color: var(--accent-color);
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.testimonial-info {
+  text-align: left;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.testimonial-title {
+  font-style: italic;
+  color: var(--body-bkg);
+}
+
+.testimonial-image img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.testimonial-review {
+  margin: 20px 0;
+  color: var(--body-bkg);
+}
+
+.testimonial-stars {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.carousel-button {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--accent-color);
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.testimonial-details {
+  margin-top: 20px;
+  text-align: left;
 }
