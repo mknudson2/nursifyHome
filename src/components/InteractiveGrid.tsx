@@ -1,18 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function InteractiveGrid() {
 
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(1);
+    const [isHovered, setIsHovered] = useState(false);
 
     const items = [
-        {id: 1, text: "Increase Efficiency", image: 'public/1.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
-        {id: 2, text: "Decrease Injury", image: 'public/2.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
-        {id: 3, text: "Decrease Burnout", image: 'public/4.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
-        {id: 4, text: "Increase Control", image: 'public/5.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
+        {id: 1, text: "Increase Efficiency", image: '/1.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
+        {id: 2, text: "Decrease Injury", image: '/2.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
+        {id: 3, text: "Decrease Burnout", image: '/4.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
+        {id: 4, text: "Increase Control", image: '/5.png', description: 'Gangleri hóf svá mál sitt: "Hverr er æðstr eða elztr allra goða?" Hárr segir: "Sá heitir Alföðr at váru máli, en í Ásgarði inum forna átti hann tólf nöfn. Eitt er Alföðr, annat er Herran eða Herjan, þriðja er Nikarr eða Hnikarr, fjórða er Nikuðr eða Hnikuðr, fimmta Fjölnir, sétta Óski, sjaunda Ómi, átta Bifliði eða Biflindi, níunda Sviðurr, tíunda Sviðrir, ellifta Viðrir, tólfta Jálg eða Jálkr."'},
     ];
 
-    const handleItemClick = (id) => {
-        setSelectedItem(selectedItem === id ? null : id);
+    useEffect(() => {
+        if (!isHovered) {
+          const interval = setInterval(() => {
+            setSelectedItem(prevItem => {
+              if (prevItem === null) return items[0].id;
+              const currentIndex = items.findIndex(item => item.id === prevItem);
+              return items[(currentIndex + 1) % items.length].id;
+            });
+          }, 5000);
+    
+          return () => clearInterval(interval);
+        }
+      }, [isHovered, items]);
+    
+      const handleMouseEnter = (id) => {
+        setSelectedItem(id);
+        setIsHovered(true);
+      };
+    
+      const handleMouseLeave = () => {
+        setIsHovered(false);
       };
     
       return (
@@ -24,7 +44,8 @@ function InteractiveGrid() {
                 <li
                   key={item.id}
                   className={selectedItem === item.id ? 'active' : ''}
-                  onClick={() => handleItemClick(item.id)}
+                  onMouseEnter={() => handleMouseEnter(item.id)}
+                  onMouseLeave={handleMouseLeave}
                 >
                   {item.text}
                 </li>
@@ -36,7 +57,7 @@ function InteractiveGrid() {
               <div
                 key={item.id}
                 className={`image-container ${selectedItem === item.id ? 'active' : ''}`}
-                style={{ backgroundImage: `url(${item.image})` }}
+                style={{ backgroundImage: `url(${item.image})`, display: selectedItem === item.id ? 'block' : 'none' }}
               >
                 {selectedItem === item.id && (
                   <div className="overlay">
