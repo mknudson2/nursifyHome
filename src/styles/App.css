@@ -19,6 +19,10 @@ body {
   width: 100%;
 }
 
+
+
+/* === Navbar === */
+
 .navbar-container {
   display: flex;
   flex-direction: row;
@@ -49,6 +53,10 @@ body {
 .offcanvas-body p:last-of-type {
   margin-bottom: 2rem;
 }
+
+
+
+/* === Hero Section === */
 
 .hero-container {
   display: block;
@@ -91,6 +99,8 @@ body {
   z-index: 2;
 }
 
+
+
 /* === Experience Buttons === */
 .experience-button-container {
   display: flex;
@@ -98,8 +108,8 @@ body {
   align-items: center;
   margin: 20px;
   margin-top: 5rem;
-  margin-bottom: 10rem;
-  column-gap: 25%;
+  margin-bottom: 12.5rem;
+  column-gap: 20%;
 }
 
 .exp-btn {
@@ -127,7 +137,7 @@ body {
   gap: 20px;
   width: 100%;
   width: 72.5%;
-  margin: 0 auto;
+  margin: 10rem auto;
 }
 
 .left-column {
@@ -150,11 +160,11 @@ body {
   padding: 10px;
   cursor: pointer;
   transition: all .75s ease;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .left-column li.active, .left-column li:hover {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--accent-color);
 }
 
@@ -205,8 +215,94 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.33);
   padding: 10px;
   border-radius: 11.75px;
   padding: 0 15%;
+  font-size: 1.5rem;
+  line-height: 200%;
+}
+
+/* === NursifyTeam === */
+.nursify-team {
+  text-align: center;
+  color: var(--main-text);
+  padding: 20px;
+  width: 72.5%;
+  margin: 17.5rem auto;
+}
+
+.nursify-team h3 {
+  font-size: 4.6875rem;
+  margin-bottom: 20px;
+}
+
+.nursify-team .highlight {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.toggle-switch {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 50%;
+  margin: 3rem auto 5rem;
+}
+
+.toggle-switch .toggle-option {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  flex: 1;
+  text-align: center;
+  border-radius: 50px;
+  z-index: 1;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.toggle-switch .toggle-option.active {
+  background-color: var(--accent-color);
+  color: var(--main-text);
+}
+
+.toggle-switch .toggle-option:not(.active) {
+  color: var(--body-bkg);
+}
+
+.toggle-switch .toggle-background {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 45%;
+  background-color: var(--accent-color);
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.team-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.team-content .image-column img {
+  width: auto;
+  height: 750px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px black;
+}
+
+.team-content .bio-column {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-left: 50px;
 }
