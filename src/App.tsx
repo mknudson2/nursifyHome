@@ -1,7 +1,7 @@
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import ExperienceButtons from './components/ExperienceButtons'
-
+import InteractiveGrid from './components/InteractiveGrid'
 import './styles/App.css'
 
 
@@ -13,6 +13,7 @@ function App() {
       <Navbar/>
       <Hero />
       <ExperienceButtons/>
+      <InteractiveGrid />
     </>
   )
 }

@@ -86,11 +86,11 @@ body {
   border: 2px solid var(--accent-color);
   border-radius: 30px;
   width: 15.625rem;
-  padding: 10px 20px; /* Adjusted padding for better visibility */
+  padding: 10px 20px; 
   font-size: 1.25rem;
-  background-color: var(--body-bkg); /* Ensure background contrasts with text */
-  color: var(--main-text); /* Ensure text color is readable */
-  cursor: pointer; /* Added cursor pointer for better UX */
+  background-color: var(--body-bkg); 
+  color: var(--main-text); 
+  cursor: pointer; 
 }
 
 .exp-btn:hover {
@@ -98,4 +98,91 @@ body {
   color: var(--main-text);
   cursor: pointer;
   transition: .25s ease-in-out;
+}
+
+/* === Interactive Grid === */
+.interactive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  width: 72.5%;
+  margin: 0 auto;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column h3 {
+  margin-bottom: 20px;
+}
+
+.left-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-column li {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.left-column li.active/*, .left-column li:hover*/ {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.right-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  position: relative;
+}
+
+.image-container {
+  width: 100%;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.image-container.active {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.image-container.active .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(25px);
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  display: none;
+}
+
+.image-container.active .overlay {
+  display: flex;
 }
