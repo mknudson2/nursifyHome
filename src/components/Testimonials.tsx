@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const testimonials = [
     {
       id: 1,
       name: 'John Doe',
       title: 'Nurse',
-      image: '/path-to-image.jpg',
+      image: '/1.png',
       review: 'Nursify has transformed the way I work. The techniques are invaluable.',
+      keyphrase: 'Superb!',
       rating: 5,
       fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
     },
@@ -14,9 +15,10 @@ const testimonials = [
       id: 2,
       name: 'Halldor Hrafnkelsson',
       title: 'Doctor',
-      image: '/path-to-image.jpg',
+      image: '/5.png',
       review: 'Nursify has transformed the way I work. The techniques are invaluable.',
-      rating: 5,
+      keyphrase: 'Superb!',
+      rating: 4,
       fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
     },
     {
@@ -25,6 +27,7 @@ const testimonials = [
       title: 'PT',
       image: '/path-to-image.jpg',
       review: 'Nursify has transformed the way I work. The techniques are invaluable.',
+      keyphrase: 'Superb!',
       rating: 4,
       fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
     },
@@ -34,6 +37,7 @@ const testimonials = [
       title: 'NP',
       image: '/path-to-image.jpg',
       review: 'Nursify has transformed the way I work. The techniques are invaluable.',
+      keyphrase: 'Superb!',
       rating: 3,
       fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
     },
@@ -43,6 +47,7 @@ const testimonials = [
       title: 'OT',
       image: '/path-to-image.jpg',
       review: 'Nursify has transformed the way I work. The techniques are invaluable.',
+      keyphrase: 'Superb!',
       rating: 5,
       fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
     }
@@ -120,7 +125,7 @@ const testimonials = [
         <button className="carousel-button next" onClick={handleNextClick}>❯</button>
       </div>
       <div className="testimonial-details">
-        <h4>{testimonials[0].name}</h4>
+        <h4>{testimonials[0].keyphrase}</h4>
         <p>{testimonials[0].fullReview}</p>
       </div>
     </div>

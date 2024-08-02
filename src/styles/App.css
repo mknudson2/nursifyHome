@@ -54,8 +54,6 @@ body {
   margin-bottom: 2rem;
 }
 
-
-
 /* === Hero Section === */
 
 .hero-container {
@@ -69,6 +67,7 @@ body {
   width: 72.5%;
   height: 65vh;
   border-radius: 8px;
+
 }
 
 .hero-container::after {
@@ -384,13 +383,15 @@ font-weight: 600;
   text-align: center;
   padding: 20px;
   width: 72.5%;
-  margin: 0 auto;
+  margin: 15rem auto;
 }
 
 .testimonials-carousel h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 4rem;
+  margin-bottom: 3rem;
 }
+
+
 
 .testimonials-carousel .highlight {
   color: var(--accent-color);
@@ -399,9 +400,10 @@ font-weight: 600;
 
 .testimonial-divider {
   border: none;
-  border-top: 2px solid var(--body-bkg);
-  margin: 0 auto;
-  width: 72.5%;
+  border-top: 2px solid var(--main-text);
+  margin: 0 auto 3rem;
+  width: 100%;
+
 }
 
 .carousel-container {
@@ -414,12 +416,12 @@ font-weight: 600;
 .carousel-content {
   display: flex;
   width: 100%;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   scroll-behavior: smooth;
 }
 
 .testimonial-card {
-  flex: 0 0 300px; /* Adjust width to fit multiple cards */
+  flex: 0 0 150px; 
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -432,6 +434,7 @@ font-weight: 600;
   cursor: pointer;
   transition: border-color 0.3s ease;
   margin: 0 50px;
+  width: 300px;
 }
 
 .testimonial-card.active {
@@ -496,6 +499,13 @@ font-weight: 600;
 }
 
 .testimonial-details {
-  margin-top: 20px;
-  text-align: left;
+  margin: 5rem auto;
+  text-align: center;
+  width: 72.5%;
+}
+
+.testimonial-details h4 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
