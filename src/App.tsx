@@ -5,6 +5,7 @@ import InteractiveGrid from './components/InteractiveGrid'
 import NursifyTeam from './components/NursifyTeam'
 import ModuleSlides from './components/ModuleSlides'
 import Testimonials from './components/Testimonials'
+import ScrollingReviews from './components/ScrollingReviews'
 import './styles/App.css'
 
 
@@ -20,6 +21,7 @@ function App() {
       <NursifyTeam />
       <ModuleSlides />
       <Testimonials />
+      <ScrollingReviews />
     </>
   )
 }

@@ -61,7 +61,7 @@ const testimonials = [
     const carousel = carouselRef.current;
     if (!carousel) return;
 
-    const scrollAmount = 1; // Amount to scroll per frame
+    const scrollAmount = 1;
     let scrollPosition = 0;
 
     function scrollCarousel() {
@@ -80,13 +80,13 @@ const testimonials = [
 
   const handlePrevClick = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft -= 300; // Adjust the scroll amount
+      carouselRef.current.scrollLeft -= 300; 
     }
   };
 
   const handleNextClick = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft += 300; // Adjust the scroll amount
+      carouselRef.current.scrollLeft += 300;
     }
   };
 

@@ -14,7 +14,7 @@ function Navbar() {
                 </IconContext.Provider>
             </button>
 
-            <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style={{ background: 'var(--body-bkg)' }}>
+            <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style={{ background: 'var(--body-bkg)' }}>
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasRightLabel">
                         <img src="/NursifyLogo.webp" alt="Nursify Education" width="150" height="75"/>
