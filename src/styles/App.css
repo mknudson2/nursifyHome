@@ -138,7 +138,7 @@ body {
   gap: 20px;
   width: 100%;
   width: 72.5%;
-  margin: 10rem auto;
+  margin: 3rem auto 5rem;
 }
 
 .left-column {
@@ -230,7 +230,7 @@ body {
   color: var(--main-text);
   padding: 20px;
   width: 72.5%;
-  margin: 17.5rem auto;
+  margin: 12rem auto;
 }
 
 .nursify-team h3 {
@@ -382,7 +382,7 @@ font-weight: 600;
   text-align: center;
   padding: 20px;
   width: 72.5%;
-  margin: 15rem auto;
+  margin: 10rem auto 0;
 }
 
 .testimonials-carousel h3 {
@@ -400,7 +400,7 @@ font-weight: 600;
 .testimonial-divider {
   border: none;
   border-top: 2px solid var(--main-text);
-  margin: 0 auto 3rem;
+  margin: 0 auto 1.5rem;
   width: 100%;
 
 }
@@ -477,7 +477,7 @@ font-weight: 600;
   color: var(--accent-color);
 }
 
-.carousel-button {
+/* .carousel-button {
   background: transparent;
   border: none;
   font-size: 2rem;
@@ -507,7 +507,7 @@ font-weight: 600;
   color: var(--accent-color);
   font-size: 2rem;
   margin-bottom: 1.5rem;
-}
+} */
 
 
 /* ============================== */
@@ -516,7 +516,7 @@ font-weight: 600;
 
 .scroller {
   max-width: 72.5%;
-  outline: 3px solid lime;
+  /* outline: 3px solid lime; */
   margin: 0 auto;
 }
 
@@ -529,13 +529,13 @@ font-weight: 600;
 .scroller[data-animated='true'] .scroller-inner {
   flex-wrap: nowrap;
   width: fit-content;
-  animation: scroll 40s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .scroller-inner {
   display: flex;
   padding-block: 2rem;
-  gap: 1rem;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
@@ -549,7 +549,7 @@ font-weight: 600;
   padding: 1rem;
   height: 275px;
   width: 200px;
-  background: var(--accent-color);
+  background: white;
   border-radius: 8px;
   box-shadow: 0 0.5rem 1rem -0.25rem black;
 }
@@ -567,7 +567,7 @@ font-weight: 600;
 }
 
 .scroller[data-speed='slow'] {
-  --_animation-duration: 160s;
+  --_animation-duration: 100s;
 }
 
 @keyframes scroll {

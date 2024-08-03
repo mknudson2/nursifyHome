@@ -20,7 +20,7 @@ function App() {
       <InteractiveGrid />
       <NursifyTeam />
       <ModuleSlides />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ScrollingReviews />
     </>
   )
