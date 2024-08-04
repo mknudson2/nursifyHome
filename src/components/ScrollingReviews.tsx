@@ -3,11 +3,11 @@ import { useEffect } from 'react';
 const testimonials = [
   {
     id: 1,
-    name: 'John Doe',
-    title: 'Nurse',
-    image: '/1.png',
+    name: 'Orson Krennic',
+    title: 'Director',
+    image: '/krennic.jpg',
     review: 'Nursify has transformed the way I work. The techniques are invaluable.',
-    keyphrase: 'Superb!',
+    keyphrase: 'Excellent!',
     rating: 5,
     fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
   },
@@ -25,7 +25,7 @@ const testimonials = [
     id: 3,
     name: 'Þorgeir Berharðsson',
     title: 'PT',
-    image: '/path-to-image.jpg',
+    image: '/1.png',
     review: 'Nursify has transformed the way I work. The techniques are invaluable.',
     keyphrase: 'Superb!',
     rating: 4,
@@ -35,7 +35,7 @@ const testimonials = [
     id: 4,
     name: 'Jóanna Egilsdóttir',
     title: 'NP',
-    image: '/path-to-image.jpg',
+    image: '/deathTrooper.avif',
     review: 'Nursify has transformed the way I work. The techniques are invaluable.',
     keyphrase: 'Superb!',
     rating: 3,
@@ -45,9 +45,29 @@ const testimonials = [
     id: 5,
     name: 'Sigmund Rafnsson',
     title: 'OT',
-    image: '/path-to-image.jpg',
+    image: '/crosshair.webp',
     review: 'Nursify has transformed the way I work. The techniques are invaluable.',
     keyphrase: 'Superb!',
+    rating: 5,
+    fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
+  },
+  {
+    id: 6,
+    name: 'Hárekr Héðinsson',
+    title: 'Wizard',
+    image: '/revan.jpeg',
+    review: 'Nursify has transformed the way I work. The techniques are invaluable.',
+    keyphrase: 'Superb!',
+    rating: 5,
+    fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
+  },
+  {
+    id: 7,
+    name: 'Thrawn',
+    title: 'Grand Admiral',
+    image: '/thrawn.jpg',
+    review: 'Nursify has transformed the way I work. The techniques are invaluable.',
+    keyphrase: 'Beyond Praise',
     rating: 5,
     fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
   }
