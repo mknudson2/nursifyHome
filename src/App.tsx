@@ -20,6 +20,7 @@ function App() {
       <NursifyTeam />
       <ModuleSlides />
       <ScrollingReviews />
+
     </>
   )
 }

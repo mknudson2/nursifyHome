@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Rating from '@mui/material/Rating';
+import { styled } from '@mui/material/styles';
 
 interface Testimonial {
     id: number;
@@ -129,6 +131,13 @@ const ScrollingReviews: React.FC = () => {
     }, []);
   
     const activeTestimonial = testimonials.find(testimonial => testimonial.id === activeTestimonialId);
+
+    const StyledRating = styled(Rating) ({
+        '& .MUIRating-iconFilled': {
+            color: 'var(--accent-color)'
+
+        },
+    })
   
     return (
       <>
@@ -163,9 +172,7 @@ const ScrollingReviews: React.FC = () => {
                 </div>
                 <p className="testimonial-review">{testimonial.review}</p>
                 <div className="testimonial-stars">
-                  {Array.from({ length: 5 }, (_, i) => (
-                    <span key={i} className={i < testimonial.rating ? 'star filled' : 'star'}>★</span>
-                  ))}
+                  <StyledRating name="read-only" value={testimonial.rating} precision={0.5} size="small" sx={{ color: 'var(--accent-color)' }} />
                 </div>
               </li>
             ))}
