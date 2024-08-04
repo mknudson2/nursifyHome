@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -15,12 +15,12 @@ interface Module {
   text: string;
 }
 
-function ModuleSlides() {
+const ModuleSlides: React.FC = () => {
   const [modules, setModules] = useState<Module[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const moduleInfo = [
+    const moduleInfo: Module[] = [
       { background_image: '/img1.webp', title: 'Module 1', subtitle: 'Core Rolling', text: 'Learn how to roll your patient with ease!' },
       { background_image: '/img2.webp', title: 'Module 2', subtitle: 'Supine to Sit', text: 'No more back pain? Use these techniques instead!' },
       { background_image: '/img3.webp', title: 'Module 3', subtitle: 'Scoot up in Bed', text: "Don't wait for help, use this technique today!" },
@@ -36,11 +36,11 @@ function ModuleSlides() {
     setModules(moduleInfo);
   }, []);
 
-    const handleSlideChange = (swiper) => {
-      setActiveIndex(swiper.realIndex);
-    };
-    
-    const activeModule = modules[activeIndex] || {};
+  const handleSlideChange = (swiper: SwiperType) => {
+    setActiveIndex(swiper.realIndex);
+  };
+
+  const activeModule = modules[activeIndex] || {};
 
   return (
     <>
@@ -79,6 +79,6 @@ function ModuleSlides() {
       </div>
     </>
   );
-}
+};
 
 export default ModuleSlides;

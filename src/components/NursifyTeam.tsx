@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function NursifyTeam() {
     const [activeMember, setActiveMember] = useState<'Philip' | 'Jason'>('Philip');
