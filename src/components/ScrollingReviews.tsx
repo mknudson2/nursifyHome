@@ -172,7 +172,7 @@ const ScrollingReviews: React.FC = () => {
                 </div>
                 <p className="testimonial-review">{testimonial.review}</p>
                 <div className="testimonial-stars">
-                  <StyledRating name="read-only" value={testimonial.rating} precision={0.5} size="small" sx={{ color: 'var(--accent-color)' }} />
+                  <StyledRating name="read-only" value={testimonial.rating} precision={0.5} size="medium" sx={{ color: 'var(--accent-color)' }} />
                 </div>
               </li>
             ))}

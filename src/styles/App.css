@@ -485,6 +485,15 @@ font-weight: 600;
 .testimonial-stars {
   font-size: 1.2rem;
   color: var(--accent-color);
+  text-align: center;
+}
+
+.star {
+  color: #ddd;
+}
+
+.star.filled {
+  color: var(--accent-color);
 }
 
 /* .carousel-button {
