@@ -575,3 +575,38 @@ font-weight: 600;
     transform: translate(calc(-50% - 0.5rem));
   }
 }
+
+.testimonial-item {
+  border: 2px solid transparent;
+  transition: border 0.5s ease-in-out;
+}
+
+.testimonial-item.active {
+  border: 2px solid var(--accent-color);
+}
+
+.active-testimonial-details {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active-testimonial-details h4{
+  font-size: 36px;
+  width: 50%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.active-testimonial-details p{
+  font-size: 22px;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
