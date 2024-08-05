@@ -2,8 +2,7 @@
   --body-bkg: #09103C;
   --main-text: #fff;
   --accent-color: #88C82D;
-  --toggle-bg: yellow;
-  --toggle-fg: black;
+  --navbar-bkg: rgba(9, 16, 60, 0.7);
 }
 
 [data-theme="light"] {
@@ -34,7 +33,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--body-bkg);
+  background-color: var(--navbar-bkg); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   z-index: 1000; 
   padding: 0 20px;
   box-shadow: 0 2px 5px black;
