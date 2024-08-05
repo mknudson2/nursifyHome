@@ -353,7 +353,10 @@ body {
 }
 
 
+
+/* ====================== */
 /* === Module Slides === */
+/* ====================== */
 
 .gameContainer h2 {
   text-align: center;
@@ -438,8 +441,6 @@ font-weight: 600;
   margin-bottom: 3rem;
 }
 
-
-
 .testimonials-carousel .highlight {
   color: var(--accent-color);
   font-weight: bold;
@@ -450,7 +451,6 @@ font-weight: 600;
   border-top: 2px solid var(--main-text);
   margin: 0 auto 1.5rem;
   width: 100%;
-
 }
 
 .carousel-container {
@@ -586,7 +586,7 @@ font-weight: 600;
 .scroller[data-animated='true'] .scroller-inner {
   flex-wrap: nowrap;
   width: fit-content;
-  animation: scroll 60s linear infinite;
+  animation: scroll 120s linear infinite;
 }
 
 .scroller-inner {
@@ -624,7 +624,7 @@ font-weight: 600;
 }
 
 .scroller[data-speed='slow'] {
-  --_animation-duration: 100s;
+  --_animation-duration: 120s;
 }
 
 @keyframes scroll {
