@@ -59,6 +59,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.offcanvas-body p:hover {
+  color: var(--accent-color);
+}
+
 /* ===Theme Toggle === */
 .theme-toggle-button {
   position: absolute;
@@ -160,7 +164,7 @@ body {
   gap: 20px;
   width: 100%;
   width: 72.5%;
-  margin: 3rem auto 5rem;
+  margin: 0 auto 5rem;
 }
 
 @media (min-width: 600px) {
@@ -270,7 +274,7 @@ body {
   color: var(--main-text);
   padding: 20px;
   width: 72.5%;
-  margin: 12rem auto;
+  margin: 10rem auto 6rem;
 }
 
 .nursify-team h3 {
@@ -292,7 +296,7 @@ body {
   margin-bottom: 20px;
   position: relative;
   width: 50%;
-  margin: 3rem auto 5rem;
+  margin: 3rem auto;
 }
 
 .toggle-switch .toggle-option {
@@ -336,16 +340,16 @@ body {
 
 .team-content .image-column img {
   width: auto;
-  height: 750px;
+  height: 500px;
   border-radius: 8px;
   box-shadow: 5px 5px 10px black;
 }
 
 .team-content .bio-column {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 2;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 
 
@@ -373,8 +377,8 @@ body {
  }
 
 .moduleImg {
-  height: 500px;
-  width: 750px;
+  height: 300px;
+  width: 500px;
   object-fit: cover;
   /* margin-bottom: 3rem; */
   border-radius: 6px;
@@ -417,12 +421,16 @@ font-weight: 600;
   color: var(--cl-mixed)
 }
 
+
+
+/* ==================== */
 /* === Testimonials === */
+/* ==================== */
 .testimonials-carousel {
   text-align: center;
   padding: 20px;
   width: 72.5%;
-  margin: 10rem auto 0;
+  margin: 7rem auto 0;
 }
 
 .testimonials-carousel h3 {
@@ -694,4 +702,8 @@ font-weight: 600;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+}
+
+.legal-links p:hover{
+  color: var(--accent-color);
 }

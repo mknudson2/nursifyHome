@@ -5,10 +5,10 @@ import InteractiveGrid from './components/InteractiveGrid'
 import NursifyTeam from './components/NursifyTeam'
 import ModuleSlides from './components/ModuleSlides'
 import ScrollingReviews from './components/ScrollingReviews'
-
+import Footer from './components/Footer'
 
 import './styles/App.css'
-import Footer from './components/Footer'
+
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
       <Navbar/>
       <Hero />
       <ExperienceButtons/>
+
       <InteractiveGrid />
       <NursifyTeam />
       <ModuleSlides />

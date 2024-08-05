@@ -71,7 +71,7 @@ const testimonials: Testimonial[] = [
     image: '/revan.jpeg',
     review: 'Nursify has transformed the way I work. The techniques are invaluable.',
     keyphrase: '"Superb!"',
-    rating: 5,
+    rating: 4,
     fullReview: 'Nursify has transformed the way I work. The techniques are invaluable. I have been able to save so much time and reduce my risk of injury thanks to the expert guidance provided by Nursify.'
   },
   {
