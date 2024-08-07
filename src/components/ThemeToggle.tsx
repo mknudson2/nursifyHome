@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState<string>(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState<string>(localStorage.getItem('theme') || 'dark');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

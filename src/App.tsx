@@ -8,19 +8,19 @@ import ScrollingReviews from './components/ScrollingReviews'
 import Footer from './components/Footer'
 
 import './styles/App.css'
+import { useState } from 'react'
 
 
 
 function App() {
-
+  const [selectedCategory, setSelectedCategory] = useState<string>('University Administrations');
 
   return (
     <>
       <Navbar/>
       <Hero />
-      <ExperienceButtons/>
-
-      <InteractiveGrid />
+      <ExperienceButtons onChange={setSelectedCategory}/>
+      <InteractiveGrid category={selectedCategory}/>
       <NursifyTeam />
       <ModuleSlides />
       <ScrollingReviews />

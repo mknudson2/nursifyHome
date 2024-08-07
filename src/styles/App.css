@@ -28,19 +28,18 @@ body {
 
 .navbar-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--navbar-bkg); 
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
-  z-index: 1000; 
+  background-color: rgba(9, 16, 60, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
   padding: 0 20px;
   box-shadow: 0 2px 5px black;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   margin-bottom: 8rem;
+  align-items: center;
 }
 
 .navigation-container {
@@ -49,6 +48,34 @@ body {
   width: 72.5%;
   align-items: center;
   margin: 0 auto;
+}
+
+.nav-subheadings {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 20px;
+  gap: 2rem;
+}
+
+.nav-subheadings p {
+  margin: 0 15px;
+  cursor: pointer;
+  color: var(--main-text);
+  font-size: 1.5rem;
+}
+
+.nav-subheadings p:hover {
+  color: var(--accent-color);
+}
+
+.btn-light {
+  margin-left: 20px;
+}
+
+.offcanvas {
+  background-color: var(--body-bkg); /* Solid background */
+  height: 100vh;
 }
 
 .offcanvas-body p {
@@ -63,6 +90,7 @@ body {
 .offcanvas-body p:hover {
   color: var(--accent-color);
 }
+
 
 /* ===Theme Toggle === */
 .theme-toggle-button {
@@ -152,7 +180,7 @@ body {
   background-color: var(--accent-color);
   color: var(--main-text);
   cursor: pointer;
-  transition: .25s ease-in-out;
+  transition: .15s ease-in-out;
 }
 
 /* ======================== */
@@ -161,17 +189,15 @@ body {
 
 .interactive-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 40% 55%;
+  gap: 5%;
   width: 100%;
-  width: 72.5%;
+  max-width: 1200px;
   margin: 0 auto 5rem;
 }
 
-@media (min-width: 600px) {
-  .interactive-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.highlight {
+  color: var(--accent-color);
 }
 
 .left-column {
@@ -181,19 +207,9 @@ body {
 
 .left-column h3 {
   margin-bottom: 20px;
-  font-size: 4.6875rem;
-}
-
-@media (min-width: 600px) {
-  .left-column h3 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .left-column h3 {
-    font-size: 4.6875rem;
-  }
+  font-size: 4.5rem;
+  /* border: 2px solid lime; */
+  margin-top: -10px;
 }
 
 .left-column ul {
@@ -206,37 +222,27 @@ body {
   padding: 10px;
   cursor: pointer;
   transition: all .65s ease;
-  font-size: 1.7rem;
-}
-
-@media (min-width: 600px) {
-  .left-column h3 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .left-column h3 {
-    font-size: 4.6875rem;
-  }
+  font-size: 1.75rem;
 }
 
 .left-column li.active, .left-column li:hover {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--accent-color);
 }
 
 .right-column {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 500px;
 }
 
 .image-container {
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-size: cover;
   background-position: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: absolute;
   top: 0;
   left: 0;
@@ -261,12 +267,38 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: rgba(0, 0, 0, 0.33);
-  padding: 10px;
-  border-radius: 11.75px;
-  padding: 0 15%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  text-shadow: 1px 1px 3px black;
+  transition: opacity 2s ease;
+  opacity: 0;
   font-size: 1.5rem;
+  padding: 10%;
   line-height: 200%;
+}
+
+.image-container.active .overlay {
+  opacity: 1;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .interactive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  .left-column li {
+    font-size: 1rem;
+  }
+
+  .right-column {
+    height: 300px;
+  }
 }
 
 /* === NursifyTeam === */
@@ -296,7 +328,7 @@ body {
   padding: 10px;
   margin-bottom: 20px;
   position: relative;
-  width: 50%;
+  width: 60%;
   margin: 3rem auto;
 }
 
@@ -325,7 +357,7 @@ body {
   position: absolute;
   top: 10px;
   bottom: 10px;
-  width: 45%;
+  width: 33%;
   background-color: var(--accent-color);
   border-radius: 50px;
   transition: transform 0.3s ease;
