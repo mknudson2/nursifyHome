@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
             <button type="button" className="btn-close text-bg-secondary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">
-            <button className="exp-btn">Join Nursify Now!</button>
+            <button className="join-btn">Join Nursify Now!</button>
           </div>
         </div>
       </div>

@@ -91,6 +91,33 @@ body {
   color: var(--accent-color);
 }
 
+/* .join-button-container {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 20px;
+  margin-top: 5rem;
+  margin-bottom: 9rem;
+  column-gap: 20%;
+} */
+.join-btn {
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
+  width: 15.625rem;
+  padding: 10px 20px; 
+  font-size: 1.25rem;
+  background-color: var(--body-bkg); 
+  color: var(--main-text); 
+  cursor: pointer; 
+}
+.join-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--main-text);
+  cursor: pointer;
+  transition: .25s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
 
 /* ===Theme Toggle === */
 .theme-toggle-button {
