@@ -23,7 +23,7 @@ function NursifyTeam() {
                 <div
                     className="toggle-background"
                     style={{
-                        transform: activeMember === 'Philip' ? 'translateX(0)' : 'translateX(100%)'
+                        transform: activeMember === 'Philip' ? 'translateX(0)' : 'translateX(95%)'
                     }}
                 />
                 <span

@@ -155,32 +155,48 @@ body {
 /* === Experience Buttons === */
 /* ========================== */
 
-.experience-button-container {
+.exp-toggle-switch {
   display: flex;
-  justify-content:center;
-  align-items: center;
-  margin: 20px;
-  margin-top: 5rem;
-  margin-bottom: 9rem;
-  column-gap: 20%;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 60%;
+  margin: 3rem auto;
 }
 
-.exp-btn {
-  border: 2px solid var(--accent-color);
-  border-radius: 30px;
-  width: 15.625rem;
-  padding: 10px 20px; 
-  font-size: 1.25rem;
-  background-color: var(--body-bkg); 
-  color: var(--main-text); 
-  cursor: pointer; 
+.exp-toggle-switch .exp-toggle-option {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  flex: 1;
+  text-align: center;
+  border-radius: 50px;
+  z-index: 1;
+  position: relative;
+  font-size: 1.5rem;
 }
 
-.exp-btn:hover {
+.exp-toggle-switch .exp-toggle-option.active {
   background-color: var(--accent-color);
   color: var(--main-text);
-  cursor: pointer;
-  transition: .15s ease-in-out;
+}
+
+.exp-toggle-switch .exp-toggle-option:not(.active) {
+  color: var(--body-bkg);
+}
+
+.exp-toggle-switch .exp-toggle-background {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 33%;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  z-index: 0;
 }
 
 /* ======================== */
@@ -301,7 +317,12 @@ body {
   }
 }
 
+
+
+/* =================== */
 /* === NursifyTeam === */
+/* =================== */
+
 .nursify-team {
   text-align: center;
   color: var(--main-text);
@@ -357,7 +378,7 @@ body {
   position: absolute;
   top: 10px;
   bottom: 10px;
-  width: 33%;
+  width: 50%;
   background-color: var(--accent-color);
   border-radius: 50px;
   transition: transform 0.3s ease;
