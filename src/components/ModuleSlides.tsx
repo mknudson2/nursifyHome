@@ -45,7 +45,7 @@ const ModuleSlides: React.FC = () => {
   return (
     <>
       <div className="gameContainer">
-        <h2>Mobility & Transfer <span className="section-header-highlight">Courses</span></h2>
+        <h2>Mobility & <span className="section-header-highlight">Transfer</span> Courses</h2>
         {modules.length > 0 && (
           <Swiper
             effect={"coverflow"}
@@ -66,8 +66,8 @@ const ModuleSlides: React.FC = () => {
           >
             {modules.map((module, index) => (
               <SwiperSlide key={index} className="swiper-slide">
-                <img className="moduleImg" src={module.background_image} alt={module.title} />
                 <h1 className="moduleText">{module.title}</h1>
+                <img className="moduleImg" src={module.background_image} alt={module.title} />
               </SwiperSlide>
             ))}
           </Swiper>

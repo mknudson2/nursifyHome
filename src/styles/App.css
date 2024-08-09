@@ -5,12 +5,6 @@
   --navbar-bkg: rgba(9, 16, 60, 0.7);
 }
 
-[data-theme="light"] {
-  --body-bkg: #fff;
-  --main-text: #09103C;
-  --accent-color: #88C82D;
-}
-
 body {
   background-color: var(--body-bkg);
   color: var(--main-text);
@@ -91,15 +85,6 @@ body {
   color: var(--accent-color);
 }
 
-/* .join-button-container {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  margin: 20px;
-  margin-top: 5rem;
-  margin-bottom: 9rem;
-  column-gap: 20%;
-} */
 .join-btn {
   border: 2px solid var(--accent-color);
   border-radius: 30px;
@@ -119,19 +104,12 @@ body {
 }
 
 
-/* ===Theme Toggle === */
-.theme-toggle-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: lime;
-  border: lime;
-  color: var(--text-color);
-  font-size: 1rem;
-  cursor: pointer;
-}
 
+
+
+/* ==================== */
 /* === Hero Section === */
+/* ==================== */
 
 .hero-container {
   display: block;
@@ -178,6 +156,10 @@ body {
 }
 
 
+
+
+
+
 /* ========================== */
 /* === Experience Buttons === */
 /* ========================== */
@@ -191,7 +173,7 @@ body {
   margin-bottom: 20px;
   position: relative;
   width: 60%;
-  margin: 3rem auto;
+  margin: 5rem auto 3rem;
 }
 
 .exp-toggle-switch .exp-toggle-option {
@@ -225,6 +207,10 @@ body {
   transition: transform 0.3s ease;
   z-index: 0;
 }
+
+
+
+
 
 /* ======================== */
 /* === Interactive Grid === */
@@ -324,7 +310,6 @@ body {
   opacity: 1;
 }
 
-/* Add responsive styles */
 @media (max-width: 768px) {
   .interactive-grid {
     grid-template-columns: 1fr;
@@ -346,6 +331,9 @@ body {
 
 
 
+
+
+
 /* =================== */
 /* === NursifyTeam === */
 /* =================== */
@@ -355,7 +343,7 @@ body {
   color: var(--main-text);
   padding: 20px;
   width: 72.5%;
-  margin: 10rem auto 6rem;
+  margin: 5rem auto 3rem;
 }
 
 .nursify-team h3 {
@@ -435,13 +423,18 @@ body {
 
 
 
+
+
+
 /* ====================== */
 /* === Module Slides === */
 /* ====================== */
 
+
+
 .gameContainer h2 {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   font-size: 4.6875rem;
 }
 
@@ -507,19 +500,23 @@ font-weight: 600;
 
 
 
+
+
+
 /* ==================== */
 /* === Testimonials === */
 /* ==================== */
+
 .testimonials-carousel {
   text-align: center;
   padding: 20px;
   width: 72.5%;
-  margin: 7rem auto 0;
+  margin: 5.25rem auto 0;
 }
 
 .testimonials-carousel h3 {
   font-size: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: .75rem;
 }
 
 .testimonials-carousel .highlight {
@@ -530,7 +527,7 @@ font-weight: 600;
 .testimonial-divider {
   border: none;
   border-top: 2px solid var(--main-text);
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.125rem;
   width: 100%;
 }
 
@@ -615,37 +612,30 @@ font-weight: 600;
   color: var(--accent-color);
 }
 
-/* .carousel-button {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--accent-color);
-  z-index: 10;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+.paused .scroller-inner {
+  animation-play-state: paused !important;
 }
 
-.prev {
-  left: 0;
+.testimonial-item.active {
+  border: 2px solid var(--accent-color);
+  transform: scale(1.05); /* Grow in size */
 }
 
-.next {
-  right: 0;
+.active-testimonial-details {
+  transition: opacity 0.5s ease-in-out;
 }
 
-.testimonial-details {
-  margin: 5rem auto;
-  text-align: center;
-  width: 72.5%;
+.active-testimonial-details.fade-in {
+  opacity: 1;
 }
 
-.testimonial-details h4 {
-  color: var(--accent-color);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-} */
+.active-testimonial-details.fade-out {
+  opacity: 0;
+}
+
+
+
 
 
 /* ============================== */
@@ -654,7 +644,6 @@ font-weight: 600;
 
 .scroller {
   max-width: 72.5%;
-  /* outline: 3px solid lime; */
   margin: 0 auto;
 }
 
@@ -667,7 +656,11 @@ font-weight: 600;
 .scroller[data-animated='true'] .scroller-inner {
   flex-wrap: nowrap;
   width: fit-content;
-  animation: scroll 120s linear infinite;
+  animation: scroll var(--_animation-duration, 120s) linear infinite;
+}
+
+.scroller.paused .scroller-inner {
+  animation-play-state: paused;
 }
 
 .scroller-inner {
@@ -690,6 +683,7 @@ font-weight: 600;
   background: white;
   border-radius: 8px;
   box-shadow: 0 0.5rem 1rem -0.25rem black;
+  transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 .scroller[data-direction='right'] {
@@ -705,36 +699,36 @@ font-weight: 600;
 }
 
 .scroller[data-speed='slow'] {
-  --_animation-duration: 120s;
+  --_animation-duration: 300s;
 }
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-50% - 0.5rem));
+      transform: translate(calc(-50% - 0.5rem));
   }
 }
 
 .testimonial-item {
   border: 2px solid transparent;
-  transition: border 0.5s ease-in-out;
 }
 
 .testimonial-item.active {
   border: 2px solid var(--accent-color);
+  transform: scale(1.1);
 }
 
 .active-testimonial-details {
   transition: opacity 0.5s ease-in-out;
 }
 
-.active-testimonial-details h4{
+.active-testimonial-details h4 {
   font-size: 36px;
   width: 50%;
   margin: 2rem auto 1.5rem;
   text-align: center;
 }
 
-.active-testimonial-details p{
+.active-testimonial-details p {
   font-size: 22px;
   margin: 0 auto 5rem;
   text-align: center;
@@ -748,6 +742,10 @@ font-weight: 600;
 .fade-out {
   opacity: 0;
 }
+
+
+
+
 
 /* ============== */
 /* === Footer === */
