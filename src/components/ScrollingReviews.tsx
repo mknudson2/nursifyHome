@@ -24,7 +24,7 @@ const ScrollingReviews: React.FC = () => {
           setFade(false);
         }, 500);
       }
-    }, 5500); 
+    }, 5250); 
 
     return () => clearInterval(intervalId);
   }, [pauseAnimation]);

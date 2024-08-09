@@ -485,7 +485,8 @@ font-weight: 600;
 .gameParagraph {
   text-align: center;
   font-size: 1.5rem;
-  margin: 2rem 7rem 3rem 7rem;
+  margin: 2rem auto 3rem;
+  width: 50%;
 }
 
 .gameParagraph h3 {
@@ -498,8 +499,15 @@ font-weight: 600;
   color: var(--cl-mixed)
 }
 
+.interested-fab {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-right: 5%;
+  align-items: center;
+  justify-content: end;
 
-
+}
 
 
 
@@ -710,6 +718,10 @@ font-weight: 600;
 
 .testimonial-item {
   border: 2px solid transparent;
+}
+
+.testimonial-item:hover{
+  cursor: pointer;
 }
 
 .testimonial-item.active {
