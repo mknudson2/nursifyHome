@@ -50,6 +50,7 @@ const ModuleSlides: React.FC = () => {
         {modules.length > 0 && (
           <Swiper
             autoplay={{delay: 5000}}
+            speed={1500}
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
