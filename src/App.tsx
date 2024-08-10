@@ -5,6 +5,7 @@ import InteractiveGrid from './components/InteractiveGrid'
 import NursifyTeam from './components/NursifyTeam'
 import ModuleSlides from './components/ModuleSlides'
 import ScrollingReviews from './components/ScrollingReviews'
+import NursifyCertification from './components/NursifyCertification'
 import Footer from './components/Footer'
 
 import './styles/App.css'
@@ -24,6 +25,7 @@ function App() {
       <NursifyTeam />
       <ModuleSlides />
       <ScrollingReviews />
+      <NursifyCertification/>
       <Footer />
     </>
   )
