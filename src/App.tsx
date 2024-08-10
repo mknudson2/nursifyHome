@@ -1,5 +1,6 @@
-import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import NursifyServices from './components/NursifyServices'
 import ExperienceButtons from './components/ExperienceButtons'
 import InteractiveGrid from './components/InteractiveGrid'
 import NursifyTeam from './components/NursifyTeam'
@@ -20,6 +21,7 @@ function App() {
     <>
       <Navbar/>
       <Hero />
+      <NursifyServices />
       <ExperienceButtons onChange={setSelectedCategory}/>
       <InteractiveGrid category={selectedCategory}/>
       <NursifyTeam />
